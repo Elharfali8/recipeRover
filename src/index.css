@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-button-bg: #2ecc71;
+  --primary-button-text: #ffffff;
+  --secondary-button-bg: #27ae60;
+  --secondary-button-text: #ffffff;
+  
+  --alert-error-bg: #d35400;
+  --alert-error-text: #ffffff;
+  --alert-notification-bg: #e67e22;
+  --alert-notification-text: #ffffff;
+  
+  --background-main: #f5f5f5;
+  --background-component: #ffffff;
+  
+  --text-main: #2c3e50;
+  --text-secondary: #7f8c8d;
+  --text-placeholder: #7f8c8d;
+  
+  --link-color: #3498db;
+  --highlight-color: #f1c40f;
+  
+  --header-bg: #2ecc71;
+  --header-text: #ffffff;
+  
+  --footer-bg: #27ae60;
+  --footer-text: #ffffff;
+  
+  --card-bg: #ffffff;
+  --card-border: #2c3e50;
+  --card-title-text: #2c3e50;
+  --card-body-text: #7f8c8d;
+}
+
+.active {
+  background-color: #ffffff;
+  color: #27ae60;
+}
+
+
+/* FONTS */
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+/* -------------------------- */
+
+.primary-button {
+  background-color: var(--primary-button-bg);
+  color: var(--primary-button-text);
+}
+
+.secondary-button {
+  background-color: var(--secondary-button-bg);
+  color: var(--secondary-button-text);
+}
+
+.alert-error {
+  background-color: var(--alert-error-bg);
+  color: var(--alert-error-text);
+}
+
+.alert-notification {
+  background-color: var(--alert-notification-bg);
+  color: var(--alert-notification-text);
+}
+
+body {
+  background-color: var(--background-main);
+  color: var(--text-main);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.main-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (min-width: 1024px) {
+  .main-container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .main-container {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}
+
+.component {
+  background-color: var(--background-component);
+}
+
+.placeholder-text {
+  color: var(--text-placeholder);
+}
+
+a {
+  color: var(--link-color);
+}
+
+.highlight {
+  color: var(--highlight-color);
+}
+
+.header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+}
+
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-color: var(--card-border);
+  color: var(--card-title-text);
+}
+
+.card-body {
+  color: var(--card-body-text);
+}
