@@ -8,7 +8,7 @@ import { FaTimes } from 'react-icons/fa'
 const Navbar = ({ navIsOpen, handleNav }) => {
     
   return (
-      <nav className='w-full h-20 grid place-items-center bg-[#27ae60] text-white'>
+      <nav className='w-full fixed top-0 z-[99] h-20 grid place-items-center bg-[#27ae60] text-white'>
           <div className="container main-container flex items-center justify-between">
               <Link to='/'>
                 <img src={logo} alt="recipeRover-logo" className='max-w-[150px]' />

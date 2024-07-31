@@ -35,11 +35,21 @@
   --card-border: #2c3e50;
   --card-title-text: #2c3e50;
   --card-body-text: #7f8c8d;
+
+  --gradient-text: linear-gradient(187deg, rgba(44,62,80,1) 0%, rgba(39,174,96,1) 100%);
 }
 
 .active {
   background-color: #ffffff;
   color: #27ae60;
+}
+
+.gradient-title {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 
@@ -85,7 +95,7 @@
 
 body {
   background-color: var(--background-main);
-  color: var(--text-main);
+  color: black;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -147,3 +157,21 @@ a {
 .card-body {
   color: var(--card-body-text);
 }
+
+
+
+/* Hero img */
+.hero-img {
+  background-image: url('./assets/hero-img.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh; /* Ensure it covers the viewport height */
+}
+
+@media (min-width: 1024px) {
+  .hero-img {
+    background-image: none;
+  }
+}
+/* --------------- */
