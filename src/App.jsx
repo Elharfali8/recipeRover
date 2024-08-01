@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { Home } from "./pages"
-import { Navbar, Sidebar } from "./components"
+import { Footer, Navbar, Sidebar } from "./components"
 import { useState } from "react"
 
 
@@ -18,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }

@@ -55,7 +55,7 @@ const Categories = () => {
                         })}
                               </div>
                               <div className='grid place-items-center pt-8 lg:pt-10'>
-                                  <Link  className='primary-button    '>
+                                  <Link  className='primary-button px-4 py-1 text-lg lg:text-xl xl:text-2xl poppins-medium tracking-wide rounded-md transition-all ease-in-out duration-150 hover:bg-[#27ae60]  '>
                                       See more
                                   </Link>
                               </div>
