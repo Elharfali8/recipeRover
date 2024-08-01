@@ -14,10 +14,10 @@ const Featured = () => {
     }, [dispatch])
 
   return (
-      <section className='py-8 lg:py-12'>
+      <section className='py-8 lg:py-12 featured'>
           <div className="container main-container">
               <SectionTitle title='popular & top rated' />
-              <div className='mt-6 lg:mt-9'>
+              <div className='mt-10 lg:mt-14'>
                   {isLoading ? (
                     <LoadingCircle />
                   ) : (

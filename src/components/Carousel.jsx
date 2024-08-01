@@ -55,7 +55,7 @@ const Carousel = ({ data }) => {
             style={{ flex: `0 0 calc(100% / ${itemsToShow})` }}
           >
               <Link to={`/recipe/${id}`} className='shadow-lg rounded-lg pb-1 '>
-                <img src={`${image}`} alt={title} />
+                <img src={`${image}`} alt={title} className=' object-cover' />
                 <div className='pt-2 px-2 flex items-center justify-between'>
                   <div>
                     <h3 className='text-white text-lg lg:text-xl tracking-wide poppins-medium '>{title}</h3>

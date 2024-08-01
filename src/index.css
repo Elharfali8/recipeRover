@@ -52,6 +52,11 @@
   color: transparent;
 }
 
+.featured {
+  background: rgb(255,255,255);
+background: linear-gradient(187deg, rgba(255,255,255,1) 0%, rgba(46,204,113,1) 100%);
+}
+
 
 /* FONTS */
 .poppins-medium {
@@ -76,6 +81,33 @@
 .primary-button {
   background-color: var(--primary-button-bg);
   color: var(--primary-button-text);
+  padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18pc;
+    border-radius: 8px;
+    letter-spacing: 0.030em;
+    transition: all ease-in-out 150ms;
+}
+
+.primary-button:hover {
+  background-color: var(--secondary-button-bg);
+}
+
+@media (min-width: 768px) {
+  .primary-button {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .primary-button {
+    font-size: 24px;
+  }
 }
 
 .secondary-button {

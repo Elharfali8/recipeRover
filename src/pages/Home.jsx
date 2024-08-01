@@ -1,5 +1,5 @@
 import React from 'react'
-import { Featured, Hero } from '../components'
+import { Categories, Featured, Hero } from '../components'
 
 const Home = () => {
   return (
@@ -8,6 +8,7 @@ const Home = () => {
       <Hero />
       </div>
       <div className=''>
+        <Categories />
         <Featured />
       </div>
 </main>

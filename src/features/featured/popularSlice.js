@@ -11,7 +11,7 @@ const apiKey = import.meta.env.VITE_API_KEY
 
 export const fetchPopular = createAsyncThunk('featured/fetchPopular', async () => {
     try {
-        const response = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?sort=popularity&number=10&apiKey=${apiKey}`)
+        const response = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?sort=popularity&number=20&apiKey=${apiKey}`)
         const data = response.data.results
         return data
     } catch (error) {
