@@ -9,22 +9,25 @@ const initialState = {
 
 const apiKey = import.meta.env.VITE_API_KEY
 
-export const fetchRecipes = createAsyncThunk('recipes/fetchRecipes', async ({activeBtn, recipeNum}) => {
+export const fetchRecipes = createAsyncThunk('recipes/fetchRecipes', async ({ activeBtn, recipeNum, mainQuery }) => {
     try {
         let url;
         if (activeBtn === 'all') {
-          url = `https://api.spoonacular.com/recipes/random?number=${recipeNum}&apiKey=${apiKey}`;
+            if (mainQuery) {
+                url = `https://api.spoonacular.com/recipes/complexSearch?query=${mainQuery}&number=${recipeNum}&apiKey=${apiKey}`;
+            } else {
+                url = `https://api.spoonacular.com/recipes/random?number=${recipeNum}&apiKey=${apiKey}`;
+            }
         } else {
-          url = `https://api.spoonacular.com/recipes/complexSearch?query=${activeBtn}&number=${recipeNum}&apiKey=${apiKey}`;
+            url = `https://api.spoonacular.com/recipes/complexSearch?query=${mainQuery}&number=${recipeNum}&apiKey=${apiKey}&diet=${activeBtn}`;
         }
         const response = await axios.get(url);
-        return activeBtn === 'all' ? response.data.recipes : response.data.results
-        
-      } catch (error) {
+        return activeBtn === 'all' && !mainQuery ? response.data.recipes : response.data.results;
+    } catch (error) {
         console.error('Failed to fetch recipes:', error);
-      }
-    })
-
+        throw error.message || 'Failed to fetch data';
+    }
+})
 
 export const recipesSlice = createSlice({
     name: 'recipes',
@@ -48,4 +51,4 @@ export const recipesSlice = createSlice({
     }
 })
 
-export default recipesSlice.reducer
+export default recipesSlice.reducer;

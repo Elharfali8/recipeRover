@@ -8,6 +8,6 @@ export const store = configureStore({
     reducer: {
         popular: popularReducer,
         categories: categoriesReducer,
-        recipes: recipesReducer
+        recipes: recipesReducer,
     }
 })

@@ -11,11 +11,6 @@ export const navLinks = [
         path: '/recipes'
     },
     {
-        id: 3,
-        title: 'popular',
-        path: '/popular'
-    },
-    {
         id: 4,
         title: 'ingredients',
         path: '/ingredients'
